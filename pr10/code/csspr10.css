@@ -1,0 +1,60 @@
+@font-face {
+    font-family:ExtraBold;
+    src: url(../font/Raleway-ExtraBold.woff) format(woff);
+
+}
+
+@font-face {
+    font-family:Regular;
+    src: url(../font/Raleway-Regular.woff) format(woff);
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html{
+  height: 100%;
+}
+.bd{
+  height: 100%;
+  display: flex;
+  position: relative;
+}
+.bg_v{
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+  object-position: center;
+
+}
+.text_o {
+    position: relative; 
+    font-family:ExtraBold;
+    font-size: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    width: 840px;
+}
+.text_o::after{
+  content: "*";
+}
+.text_o:hover{
+  color: rgb(78, 78, 78);
+}
+.text_o:hover::before {
+  font-family: Regular;
+  content: 'На самом деле нет.\AВажнее &mdash; научиться ошибаться.';
+  white-space: pre;
+  position: absolute;
+  background-color: white;
+  font-size: 42px;
+  border-radius: 15px;
+  box-shadow: 0 10px 0 rgb(0, 0, 0);
+  color:rgb(0, 0, 0);
+  top:150px;
+  left: 450px;
+}
